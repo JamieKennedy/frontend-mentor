@@ -34,6 +34,6 @@ jobs:
               # EMAIL: jamiekennedy97@gmail.com
               # NAME: JamieKennedy
               run: |
-                  git config user.name "$(git log -n 1 --pretty=format:%an)"
-                  git config user.email "$(git log -n 1 --pretty=format:%ae)"
+                  git config --global user.name JamieKennedy
+                  git config --global user.email jamiekennedy97@gmail.com
                   npm run deploy
