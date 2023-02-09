@@ -30,7 +30,7 @@ jobs:
               run: npm install
 
             - name: run deploy
-              env:
+              # env:
               # EMAIL: jamiekennedy97@gmail.com
               # NAME: JamieKennedy
               run: |
