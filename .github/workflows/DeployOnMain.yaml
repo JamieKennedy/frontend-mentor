@@ -25,14 +25,15 @@ jobs:
             # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
             - uses: actions/checkout@v3
 
-            - name: setup git creds
-              run: |
-                  git config user.name "$(git log -n 1 --pretty=format:%an)"
-                  git config user.email "$(git log -n 1 --pretty=format:%ae)"
-
             # Runs a single command using the runners shell
             - name: npm install
               run: npm install
 
             - name: run deploy
-              run: npm run deploy
+              env:
+              EMAIL: jamiekennedy97@gmail.com
+              NAME: JamieKennedy
+              run: |
+                  git config user.name "$(git log -n 1 --pretty=format:%an)"
+                  git config user.email "$(git log -n 1 --pretty=format:%ae)"
+                  npm run deploy
