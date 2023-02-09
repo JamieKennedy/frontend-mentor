@@ -31,8 +31,8 @@ jobs:
 
             - name: run deploy
               env:
-              EMAIL: jamiekennedy97@gmail.com
-              NAME: JamieKennedy
+              # EMAIL: jamiekennedy97@gmail.com
+              # NAME: JamieKennedy
               run: |
                   git config user.name "$(git log -n 1 --pretty=format:%an)"
                   git config user.email "$(git log -n 1 --pretty=format:%ae)"
