@@ -34,7 +34,7 @@ jobs:
               shell: bash
               run: |
                   echo "::group::Build"
-                  npm ci tsc && vite build
+                  npm ci build
                   echo "::endgroup::"
 
             - name: "upload"
