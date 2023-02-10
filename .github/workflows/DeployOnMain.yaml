@@ -2,11 +2,6 @@
 
 name: Deploy to GitHub Pages
 
-outputs:
-    page_url:
-        description: "The URL of the page"
-        value: ${{ steps.deploy.outputs.page_url }}
-
 on:
     # Triggers the workflow on push or pull request events but only for the "main" branch
     push:
