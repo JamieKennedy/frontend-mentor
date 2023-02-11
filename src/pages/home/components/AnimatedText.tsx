@@ -7,24 +7,31 @@ interface IAnimatedText {
 const AnimatedText = ({ children }: IAnimatedText) => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-    const defaultWeight: string = "medium";
-    const weights: string[] = ["extrabold", "bold", "semibold", "medium"];
+    const defaultClass: string = "font-normal";
+    const defaultSize: string = "";
+    const hoverClasses: string[] = [
+        "font-black",
+        "font-extrabold",
+        "font-bold",
+        "font-semibold",
+        "font-medium",
+    ];
 
     const addClass = (charIndex: number): string => {
         // not hovering so dont add effects
         if (hoveredIndex == null) {
-            return defaultWeight;
+            return defaultClass;
         }
 
         // get the index difference between the hovered and current char
         const indexDiff: number = Math.abs(charIndex - hoveredIndex);
 
-        if (indexDiff < 4) {
+        if (indexDiff < 5) {
             // add the correct weight based on the distance from the hovered char
-            return weights[indexDiff];
+            return hoverClasses[indexDiff];
         }
 
-        return defaultWeight;
+        return defaultClass;
     };
 
     // create array of span for each letter
@@ -34,7 +41,7 @@ const AnimatedText = ({ children }: IAnimatedText) => {
                 key={idx}
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`transition-all duration-200 font-${addClass(idx)}`}
+                className={`transition-all duration-100 ${addClass(idx)}`}
             >
                 {char}
             </span>
@@ -42,7 +49,7 @@ const AnimatedText = ({ children }: IAnimatedText) => {
     });
 
     return (
-        <p className="cursor-text text-center font-mona text-4xl text-sky-100">
+        <p className="cursor-text text-center font-rubik text-4xl text-sky-100">
             {chars}
         </p>
     );

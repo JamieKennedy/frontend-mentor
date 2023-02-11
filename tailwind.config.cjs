@@ -4,7 +4,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                mona: ["Mona Sans"],
+                rubik: ["Rubik", "sans-serif"],
             },
         },
     },
