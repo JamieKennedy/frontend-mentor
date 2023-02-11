@@ -49,7 +49,7 @@ const AnimatedText = ({ children }: IAnimatedText) => {
     });
 
     return (
-        <p className="cursor-text text-center font-rubik text-4xl text-sky-100">
+        <p className="font-rubik cursor-text text-center text-4xl text-sky-100">
             {chars}
         </p>
     );

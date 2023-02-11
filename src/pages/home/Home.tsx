@@ -1,5 +1,5 @@
-import AnimatedText from "./components/AnimatedText";
 import React from "react";
+import AnimatedText from "./components/AnimatedText";
 
 const Home = () => {
     return (
