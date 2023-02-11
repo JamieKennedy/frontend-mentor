@@ -1,5 +1,3 @@
-import "./home.css";
-
 import AnimatedText from "./components/AnimatedText";
 import React from "react";
 

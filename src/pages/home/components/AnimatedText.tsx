@@ -7,10 +7,8 @@ interface IAnimatedText {
 const AnimatedText = ({ children }: IAnimatedText) => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-    const defaultWeight: string = "normal";
+    const defaultWeight: string = "medium";
     const weights: string[] = ["extrabold", "bold", "semibold", "medium"];
-
-    const hoveredDirectClass: string = "font-black";
 
     const addClass = (charIndex: number): string => {
         // not hovering so dont add effects
@@ -36,7 +34,7 @@ const AnimatedText = ({ children }: IAnimatedText) => {
                 key={idx}
                 onMouseEnter={() => setHoveredIndex(idx)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`transition-all duration-100 font-${addClass(idx)}`}
+                className={`transition-all duration-200 font-${addClass(idx)}`}
             >
                 {char}
             </span>
