@@ -1,13 +1,11 @@
 import React from "react";
-import AnimatedText from "./components/AnimatedText";
+import Header from "./components/Header";
+import AnimatedText from "./components/UI/AnimatedText";
 
 const Home = () => {
     return (
         <div className="min-h-screen w-full bg-slate-900 ">
-            <section className="align-items-center m-auto flex h-48 max-w-screen-2xl flex-col justify-evenly py-10 ">
-                <AnimatedText>Frontend Mentor Solution Repository</AnimatedText>
-                <div className="m-auto h-1 w-32 rounded-sm bg-sky-200"></div>
-            </section>
+            <Header />
             <section className="h-screen w-full "></section>
         </div>
     );
