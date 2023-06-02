@@ -1,13 +1,14 @@
 import React from "react";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
-import AnimatedText from "./components/UI/AnimatedText";
 
 const Home = () => {
     return (
-        <div className="min-h-screen w-full bg-slate-900 ">
+        <main className='min-h-screen w-full bg-secondary '>
             <Header />
-            <section className="h-screen w-full "></section>
-        </div>
+            <section className='h-screen w-full '></section>
+            <Footer />
+        </main>
     );
 };
 
